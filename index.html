@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <h1>CountDown</h1>
+      <div
+        style="
+          display: flex;
+          flex-direction: row;
+          gap: 65px;
+          align-items: center;
+        "
+      >
+        <label for="">Hour</label>
+
+        <label for="">Minute</label>
+
+        <label for="">Second</label>
+      </div>
+      <div style="display: flex; flex-direction: row">
+        <input
+          type="number"
+          maxlength="2"
+          placeholder="00"
+          oninput="this.value=this.value.slice(0,maxLength)"
+          style="border: none; font-size: 50px; width: 90px; height: 50px"
+          class="hour"
+        />
+
+        <input
+          type="number"
+          placeholder="00"
+          maxlength="2"
+          oninput="this.value=this.value.slice(0,maxLength)"
+          style="border: none; font-size: 50px; width: 90px; height: 50px"
+          class="min"
+        />
+
+        <input
+          type="number"
+          placeholder="00"
+          maxlength="2"
+          oninput="this.value=this.value.slice(0,maxLength)"
+          style="border: none; font-size: 50px; width: 90px; height: 50px"
+          class="sec"
+        />
+      </div>
+      <br />
+      <button class="start">Start</button>
+      <button class="stop" style="display: none">Stop</button>
+      <button class="reset">Reset</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
